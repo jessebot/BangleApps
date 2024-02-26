@@ -28,15 +28,15 @@ function draw() {
   // draw date
   var date = new Date();
   var dateStr = require("locale").date(date).toUpperCase();
-  g.setFontAlign(0,0,1).setFont("4x6",3);
+  g.setFontAlign(0,0,1).setFont("4x6",2.5);
   // clear the background
-  g.clearRect(dateX-4,dateY+65,dateX+8,dateY-70);
+  g.clearRect(dateX-4,dateY+50,dateX+8,dateY-55);
   g.drawString(dateStr,dateX,dateY);
   // draw time
   var timeStr = require("locale").time(date,1);
   g.setFontAlign(0,0).setFont("4x6",3);
   // clear the background
-  g.clearRect(timeX-40,timeY-5,timeX+35,timeY+21);
+  g.clearRect(timeX-35,timeY-5,timeX+30,timeY+21);
   g.drawString(timeStr,timeX,timeY+10);
   }
 
