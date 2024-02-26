@@ -10,6 +10,12 @@ function queueDraw() {
   }, 60000 - (Date.now() % 60000));
 }
 
+function getSteps() {
+  var steps = Bangle.getHealthStatus("day").steps;
+  steps = Math.round(steps/1000);
+  return steps + "k";
+}
+
 function draw() {
   // queue next draw in one minute
   queueDraw();
@@ -25,6 +31,8 @@ function draw() {
   dateY = g.getHeight()/2;
   g.reset();
   g.setTheme({bg:"#000000",fg:"#00ff00"});
+  g.setFontAlign(0,0).setFont("4x6",2.5);
+  g.drawString(getSteps(), 10, 10);
   // draw date
   var date = new Date();
   var dateStr = require("locale").date(date).toUpperCase();
