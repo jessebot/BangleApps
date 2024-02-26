@@ -1,7 +1,7 @@
 {
   "id": "roundboy",
   "name": "Round Boy",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A clock using a round lynx image",
   "icon": "app.png",
   "screenshots": [{"url":"screenshot.png"}],
