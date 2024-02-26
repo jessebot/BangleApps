@@ -1,4 +1,4 @@
-# Round Boy Clock
+# Round Boy
 
 Uses a cute picture of a round lynx as your clock.
 
