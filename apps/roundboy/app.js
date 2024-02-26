@@ -22,12 +22,14 @@ function draw() {
   timeX = g.getWidth()/2 + 5;
   timeY = g.getHeight() - 20;
   g.reset();
-  g.setTheme({bg:"#000000",fg:"#ffffff"});
-  // work out locale-friendly date/time
+  g.setTheme({bg:"#000000",fg:"#80ff00"});
+  // draw date
   var date = new Date();
-  var timeStr = require("locale").time(date,1);
-  var dateStr = require("locale").date(date);
+  var dateStr = require("locale").date(date).toUpperCase();
+  g.setFontAlign(0,0,1).setFont("4x6",2);
+  g.drawString(dateStr,g.getWidth()-8,g.getHeight()/2);
   // draw time
+  var timeStr = require("locale").time(date,1);
   g.setFontAlign(0,0).setFont("Vector",24);
   // clear the background
   g.clearRect(timeX-40,timeY-5,timeX+35,timeY+21);
