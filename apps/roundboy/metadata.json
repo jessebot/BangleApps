@@ -1,7 +1,7 @@
 {
   "id": "roundboy",
   "name": "Round Boy",
-  "version": "0.06",
+  "version": "0.07",
   "description": "A clock using a round lynx image. Displays steps at top left.",
   "icon": "app.png",
   "screenshots": [{"url":"screenshot.png"}],
